@@ -120,10 +120,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &mt ESCAPE Q        &kp W  &kp E       &kp R  &kp T              &kp Y      &kp U  &kp I          &kp O    &kp P
-                &mt LEFT_CONTROL A  &kp S  &kp D       &kp F  &kp G              &kp H      &kp J  &kp K          &kp L    &kp SEMICOLON
-&kp LEFT_SHIFT  &kp Z               &kp X  &kp C       &kp V  &kp B              &kp N      &kp M  &kp COMMA      &kp DOT  &kp SLASH      &kp APOS
-                                           &kp RETURN  &mo 2  &mt LCTRL SPACE    &kp SPACE  &mo 1  &kp BACKSPACE
+                &mt ESCAPE Q        &kp W  &kp E       &kp R  &kp T              &kp Y      &kp U        &kp I          &kp O    &kp P
+                &mt LEFT_CONTROL A  &kp S  &kp D       &kp F  &kp G              &kp H      &kp J        &kp K          &kp L    &kp SEMICOLON
+&kp LEFT_SHIFT  &kp Z               &kp X  &kp C       &kp V  &kp B              &kp N      &kp M        &kp COMMA      &kp DOT  &kp SLASH      &kp APOS
+                                           &kp RETURN  &mo 2  &mt LCTRL SPACE    &kp SPACE  &lt 1 RSHFT  &kp BACKSPACE
             >;
         };
 
