@@ -11,7 +11,6 @@
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -86,7 +85,7 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        Actions {
+        Shortcuts {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "NAVI";
@@ -103,30 +102,21 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp ESC    &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &kp LC(T)               &kp LC(R)              &kp PAGE_DOWN   &kp UP_ARROW    &kp PAGE_UP      &kp DELETE
-                &kp LC(A)  &kp LC(S)           &kp LA(TAB)       &kp LG(S)            &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
-&kp LEFT_SHIFT  &kp LC(Z)  &kp LC(X)           &kp LC(C)         &kp LC(V)            &kp END                 &kp HOME               &none           &none           &none            &none       &bt BT_CLR
-                                               &none             &none                &kp LCTRL               &none                  &none           &kp BACKSPACE
+          &kp ESC    &kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &kp LG(LS(S))    &kp LC(HOME)        &kp PAGE_DOWN   &kp UP_ARROW    &kp PAGE_UP      &kp DELETE
+          &kp LC(A)  &kp LC(S)           &kp LA(TAB)       &kp LC(T)            &kp LC(R)        &kp LC(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(RIGHT_ARROW)
+&kp CAPS  &kp LC(Z)  &kp LC(X)           &kp LC(C)         &kp LC(V)            &kp LC(Y)        &kp LC(END)         &kp HOME        &none           &kp END          &none                &none
+                                         &none             &none                &none            &none               &none           &kp BACKSPACE
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        Numpad_Symbol {
-            bindings = <
-           &trans  &kp LS(EXCL)  &kp LS(N8)     &mkp RCLK     &kp LS(UNDER)    &kp STAR        &kp N7  &kp N8     &kp N9  &kp MINUS
-           &trans  &kp LS(DLLR)  &kp LS(PRCNT)  &mkp LCLK     &mkp MB3         &kp FSLH        &kp N4  &kp N5     &kp N6  &kp PLUS
-&kp LSHFT  &trans  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)  &kp LS(RPAR)     &kp KP_NUMLOCK  &kp N1  &kp N2     &kp N3  &kp DOT    &kp FSLH
-                                 &none          &none         &none            &kp N0          &none   &kp ENTER
-            >;
-        };
-
-        layer_3 {
+        Symbol_Numpad {
             bindings = <
                &kp LS(POUND)  &kp LS(LT)    &kp LS(STAR)   &kp LS(LPAR)  &kp LS(RPAR)    &kp STAR            &kp N7  &kp N8    &kp N9  &kp MINUS
-               &kp LS(AT)     &kp LS(GT)    &kp LS(UNDER)  &mkp LCLK     &mkp RCLK       &kp FSLH            &kp N4  &kp N5    &kp N6  &kp PLUS
-&kp LS(CARET)  &kp LS(EXCL)   &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(AMPS)  &kp EQUAL       &kp LS(APOSTROPHE)  &kp N1  &kp N2    &kp N3  &kp DOT    &kp RET
+               &kp LS(AT)     &kp LS(GT)    &kp LS(UNDER)  &mkp LCLK     &mkp RCLK       &kp PERIOD          &kp N4  &kp N5    &kp N6  &kp PLUS
+&kp LS(CARET)  &kp LS(EXCL)   &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(AMPS)  &kp EQUAL       &kp LS(APOSTROPHE)  &kp N1  &kp N2    &kp N3  &kp SLASH  &kp RET
                                             &none          &none         &none           &mkp MCLK           &kp N0  &kp BSPC
             >;
         };
